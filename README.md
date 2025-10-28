@@ -57,3 +57,5 @@ Still a work in progress but this could showcase some recent progress on this ap
 ### Realtime UI feedback 🪄
 
 Customization changes to UI library are updated on all pages instantly.
+
+<img width="1710" height="981" alt="Screenshot 2025-10-28 at 7 10 29 PM" src="https://github.com/user-attachments/assets/5c8200d5-a164-471a-a9a8-5fe70f602d44" />
