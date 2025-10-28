@@ -1,25 +1,11 @@
-# README
+# UI Creator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An open source app for creating UI libraries. 
 
-Things you may want to cover:
+Built with Ruby on Rails 🛤️ 💎
 
-* Ruby version
+Dependencies currently require Ruby on Rails being installed the versions used are
 
-* System dependencies
+- Ruby 3.4.5
+- Rails 8.0.3
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ui-creator
