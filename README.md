@@ -53,3 +53,7 @@ It should say the server started and is available at localhost:3000 now you can 
 Still a work in progress but this could showcase some recent progress on this app.
 
 <img width="1710" height="1068" alt="Screenshot 2025-10-28 at 4 02 56 PM" src="https://github.com/user-attachments/assets/3d768dc0-9336-4e45-b0f9-82b6ff440217" />
+
+### Realtime UI feedback 🪄
+
+Customization changes to UI library are updated on all pages instantly.

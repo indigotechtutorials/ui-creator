@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :ui_libraries do
     scope module: :ui_libraries do
-      resource :preferences, only: [:create]
+      resource :preferences, only: [:show, :create]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

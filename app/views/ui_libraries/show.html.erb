@@ -6,30 +6,13 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <h1 class="font-bold text-4xl"><%= @ui_library.name %> UI </h1>
+  <h1 class="font-bold text-4xl mb-4"><%= @ui_library.name %> UI </h1>
+  <%= link_to "Customization settings", ui_library_preferences_path(@ui_library), class: "text-lg" %>
+
+  <%= turbo_frame_tag :button_section do %>
+    <%= render "button_section", ui_library: @ui_library %>
+  <% end %>
   
-  <h2 class="text-2xl mt-8"> Customization Settings </h2>
-  <p class="text-lg"> Make your UI library feel more like you </p>
-
-  <div class="flex flex-col lg:flex-row">
-    <div class="w-full">
-      <%= turbo_frame_tag :edge_style_preference do %>
-        <%= render "edge_style_preference", ui_library: @ui_library %>
-      <% end %>
-      <%= turbo_frame_tag :background_color_preference do %>
-        <%= render "background_color_preference", ui_library: @ui_library %>
-      <% end %>
-      <%= turbo_frame_tag :text_color_preference do %>
-        <%= render "text_color_preference", ui_library: @ui_library %>
-      <% end %>
-    </div>
-
-    <%= render "preview_element", ui_library: @ui_library %>
-  </div>
-
-  <hr class="mt-8"/>
-  <%= render "button_section", ui_library: @ui_library %>
-
   <div class="flex gap-4 mt-8">
     <%= link_to "Edit this ui library", edit_ui_library_path(@ui_library), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
     <%= link_to "Back to ui libraries", ui_libraries_path, class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>

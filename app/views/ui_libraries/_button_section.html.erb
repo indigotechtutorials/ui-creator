@@ -2,20 +2,24 @@
   <h3 class="font-semibold text-2xl"> Button Section </h3>
   <p class="text-lg"> Your custom button UI elements </p>
   
-  <div class="flex gap-4 mt-8 rounded-t border border-gray-900 p-2">
-    <%= link_to "#" do %>
+  <div class="flex mt-8 rounded-t border border-gray-900">
+    <%= link_to ui_library_path(ui_library, tab: :preview), class: "p-2 #{"bg-gray-300" if params[:tab].in?([nil, "preview"])}" do %>
       <span> Preview </span>
     <% end %>
-    <%= link_to "#" do %>
+    <%= link_to ui_library_path(ui_library, tab: :html), class: "p-2 #{"bg-gray-300" if params[:tab] == "html" }" do %>
       <span> HTML </span>
-    <% end %>
-    <%= link_to "#" do %>
-      <span> ViewComponent </span>
     <% end %>
   </div>
   <div class="max-h-80 w-full border border-gray-900 border-t-0 rounded-b bg-gray-200 p-4">
-    <div class="flex gap-8">
-      <%= link_to "Primary Button", "#", class: "#{background_color_preference(ui_library.background_color_preference, ui_library.background_color_level)} #{text_color_preference(ui_library.text_color_preference, ui_library.text_color_level)} #{button_roundedness_for_preference(ui_library.edge_style_preference)} px-3 py-2"  %>
-    </div>
+    <% if params[:tab].nil? || params[:tab] == "preview" %>
+      <div class="flex gap-8">
+        <%= render Buttons::PrimaryComponent.new(ui_library) %>
+      </div>
+    <% end %>
+
+    <% if params[:tab] == "html" %>
+      <textarea readonly class="w-full focus:border-0 focus:ring-0 focus:outline-none">
+<%= render Buttons::PrimaryComponent.new(ui_library) %></textarea>
+    <% end %>
   </div>
 </div>
