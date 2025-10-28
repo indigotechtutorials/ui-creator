@@ -11,9 +11,21 @@
   <h2 class="text-2xl mt-8"> Customization Settings </h2>
   <p class="text-lg"> Make your UI library feel more like you </p>
 
-  <%= render "edge_style_preference", ui_library: @ui_library %>
-  <%= render "background_color_preference", ui_library: @ui_library %>
-  <%= render "text_color_preference", ui_library: @ui_library %>
+  <div class="flex flex-col lg:flex-row">
+    <div class="w-full">
+      <%= turbo_frame_tag :edge_style_preference do %>
+        <%= render "edge_style_preference", ui_library: @ui_library %>
+      <% end %>
+      <%= turbo_frame_tag :background_color_preference do %>
+        <%= render "background_color_preference", ui_library: @ui_library %>
+      <% end %>
+      <%= turbo_frame_tag :text_color_preference do %>
+        <%= render "text_color_preference", ui_library: @ui_library %>
+      <% end %>
+    </div>
+
+    <%= render "preview_element", ui_library: @ui_library %>
+  </div>
 
   <hr class="mt-8"/>
   <div class="mt-8 min-h-[60vh]">
