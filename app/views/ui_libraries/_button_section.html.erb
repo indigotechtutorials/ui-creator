@@ -1,0 +1,21 @@
+<div class="mt-8 min-h-[60vh]" id="button-section">
+  <h3 class="font-semibold text-2xl"> Button Section </h3>
+  <p class="text-lg"> Your custom button UI elements </p>
+  
+  <div class="flex gap-4 mt-8 rounded-t border border-gray-900 p-2">
+    <%= link_to "#" do %>
+      <span> Preview </span>
+    <% end %>
+    <%= link_to "#" do %>
+      <span> HTML </span>
+    <% end %>
+    <%= link_to "#" do %>
+      <span> ViewComponent </span>
+    <% end %>
+  </div>
+  <div class="max-h-80 w-full border border-gray-900 border-t-0 rounded-b bg-gray-200 p-4">
+    <div class="flex gap-8">
+      <%= link_to "Primary Button", "#", class: "#{background_color_preference(ui_library.background_color_preference, ui_library.background_color_level)} #{text_color_preference(ui_library.text_color_preference, ui_library.text_color_level)} #{button_roundedness_for_preference(ui_library.edge_style_preference)} px-3 py-2"  %>
+    </div>
+  </div>
+</div>
