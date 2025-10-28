@@ -1,0 +1,277 @@
+<div class="flex flex-col mt-4" id="background-color-preference">
+  <span class="text-xl"> Background color preference </span>
+  <%= form_with model: @ui_library, url: ui_library_preferences_path(@ui_library), data: { controller: "form" }, method: :post do |form| %>
+    <div class="flex w-full flex-wrap gap-2">
+      <%= form.label :background_color_preference, value: "red" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Red </span>
+            <%= form.radio_button :background_color_preference, "red", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("red", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "orange" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Orange </span>
+            <%= form.radio_button :background_color_preference, "orange", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("orange", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "amber" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Amber </span>
+            <%= form.radio_button :background_color_preference, "amber", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("amber", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "yellow" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Yellow </span>
+            <%= form.radio_button :background_color_preference, "yellow", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("yellow", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "lime" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Lime </span>
+            <%= form.radio_button :background_color_preference, "lime", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("lime", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "green" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Green </span>
+            <%= form.radio_button :background_color_preference, "green", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("green", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "emerald" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Emerald </span>
+            <%= form.radio_button :background_color_preference, "emerald", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("emerald", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "teal" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Teal </span>
+            <%= form.radio_button :background_color_preference, "teal", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("teal", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "cyan" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Cyan </span>
+            <%= form.radio_button :background_color_preference, "cyan", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("cyan", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+
+      <%= form.label :background_color_preference, value: "sky" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Sky </span>
+            <%= form.radio_button :background_color_preference, "sky", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("sky", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "blue" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Blue </span>
+            <%= form.radio_button :background_color_preference, "blue", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("blue", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "indigo" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Indigo </span>
+            <%= form.radio_button :background_color_preference, "indigo", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("indigo", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "violet" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Violet </span>
+            <%= form.radio_button :background_color_preference, "violet", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("violet", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "purple" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Purple </span>
+            <%= form.radio_button :background_color_preference, "purple", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("purple", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+
+      <%= form.label :background_color_preference, value: "fuchsia" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Fuchsia </span>
+            <%= form.radio_button :background_color_preference, "fuchsia", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("fuchsia", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "pink" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Pink </span>
+            <%= form.radio_button :background_color_preference, "pink", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("pink", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "rose" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Rose </span>
+            <%= form.radio_button :background_color_preference, "rose", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("rose", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "slate" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Slate </span>
+            <%= form.radio_button :background_color_preference, "slate", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("slate", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "gray" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Gray </span>
+            <%= form.radio_button :background_color_preference, "gray", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("gray", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "zinc" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Zinc </span>
+            <%= form.radio_button :background_color_preference, "zinc", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("zinc", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "neutral" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Neutral </span>
+            <%= form.radio_button :background_color_preference, "neutral", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("neutral", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :background_color_preference, value: "stone" do %>
+        <div class="flex flex-col border-2 border-transparent has-[:checked]:border-gray-300 p-2">
+          <div class="w-full flex justify-between">
+            <span class="text-sm"> Stone </span>
+            <%= form.radio_button :background_color_preference, "stone", data: { action: "form#submit" }, class: "hidden" %>
+          </div>
+          <div class="flex items-center justify-center h-16 w-16 mx-auto">
+            <div class="w-full h-16 <%= background_color_preference("stone", @ui_library.background_color_level) %>"></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="flex flex-col max-w-xs">
+      <%= form.label :background_color_level, "Background color level" %>
+      <%= form.number_field :background_color_level, min: 0, max: 9, data: { action: "form#submit" }, class: "", value: (@ui_library.background_color_level || "5"),
+        class: "text-xl text-center w-10 focus:border-0" %>
+    </div>
+  <% end %>
+</div>

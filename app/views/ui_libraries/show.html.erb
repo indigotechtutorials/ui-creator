@@ -1,0 +1,46 @@
+<% content_for :title, "#{@ui_library.name} UI" %>
+<%= turbo_stream_from @ui_library %>
+
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <h1 class="font-bold text-4xl"><%= @ui_library.name %> UI </h1>
+  
+  <h2 class="text-2xl mt-8"> Customization Settings </h2>
+  <p class="text-lg"> Make your UI library feel more like you </p>
+
+  <%= render "edge_style_preference", ui_library: @ui_library %>
+  <%= render "background_color_preference", ui_library: @ui_library %>
+  <%= render "text_color_preference", ui_library: @ui_library %>
+
+  <hr class="mt-8"/>
+  <div class="mt-8 min-h-[60vh]">
+    <h3 class="font-semibold text-2xl"> Button Section </h3>
+    <p class="text-lg"> Your custom button UI elements </p>
+    
+    <div class="flex gap-4 mt-8 rounded-t border border-gray-900 p-2">
+      <%= link_to "#" do %>
+        <span> Preview </span>
+      <% end %>
+      <%= link_to "#" do %>
+        <span> HTML </span>
+      <% end %>
+      <%= link_to "#" do %>
+        <span> ViewComponent </span>
+      <% end %>
+    </div>
+    <div class="max-h-80 w-full border border-gray-900 border-t-0 rounded-b bg-gray-200 p-4">
+      <div class="flex gap-8">
+        <%= link_to "Primary Button", "#", class: "#{background_color_preference(@ui_library.background_color_preference, @ui_library.background_color_level)} #{text_color_preference(@ui_library.text_color_preference, @ui_library.text_color_level)} #{button_roundedness_for_preference(@ui_library.edge_style_preference)} px-3 py-2"  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex gap-4 mt-8">
+    <%= link_to "Edit this ui library", edit_ui_library_path(@ui_library), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+    <%= link_to "Back to ui libraries", ui_libraries_path, class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+    <%= button_to "Destroy this ui library", @ui_library, method: :delete, form_class: "sm:inline-block", class: "w-full rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" } %>
+  </div>
+</div>

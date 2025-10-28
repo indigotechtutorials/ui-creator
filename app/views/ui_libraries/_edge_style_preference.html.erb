@@ -1,0 +1,42 @@
+<div class="flex flex-col mt-4" id="edge-style-preference">
+  <span class="text-xl"> Edge style preference </span>
+  <%= form_with model: @ui_library, url: ui_library_preferences_path(@ui_library), data: { controller: "form" }, method: :post do |form| %>
+    <div class="flex flex-wrap gap-8">
+      <%= form.label :edge_style_preference, value: "rounded" do %>
+        <div class="flex flex-col p-4 rounded-lg w-60 h-40 shadow-lg">
+          <div class="w-full flex justify-between">
+            <span> Fully rounded </span>
+            <%= form.radio_button :edge_style_preference, "rounded", data: { action: "form#submit" } %>
+          </div>
+          <div class="flex items-center justify-center w-20 h-20 mx-auto">
+            <div class="h-8 w-8 border-2 border-r-0 border-gray-900 rounded-l-full"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :edge_style_preference, value: "slightly_rounded" do %>
+        <div class="flex flex-col p-4 rounded-lg w-60 h-40 shadow-lg">
+          <div class="w-full flex justify-between">
+            <span> Slightly rounded </span>
+            <%= form.radio_button :edge_style_preference, "slightly_rounded", data: { action: "form#submit" } %>
+          </div>
+          <div class="flex items-center justify-center w-20 h-20 mx-auto">
+            <div class="h-8 w-8 border-2 border-r-0 border-gray-900 rounded-l-lg"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <%= form.label :edge_style_preference, value: "square" do %>
+        <div class="flex flex-col p-4 rounded-lg w-60 h-40 shadow-lg">
+          <div class="w-full flex justify-between">
+            <span> Square </span>
+            <%= form.radio_button :edge_style_preference, "square", data: { action: "form#submit" } %>
+          </div>
+          <div class="flex items-center justify-center w-20 h-20 mx-auto">
+            <div class="h-8 w-8 border-2 border-r-0 border-gray-900"></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
